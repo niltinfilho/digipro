@@ -1,0 +1,16 @@
+
+{
+  "name": "digipro",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+      "dev": "tailwindcss -i ./styles/input.css -o ./styles/main.css --watch --minify",
+      "rebuild": "tailwindcss -i ./styles/input.css -o ./styles/main.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

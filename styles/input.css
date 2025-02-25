@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "";
+  src: url("");
+  font-style: ;
+  font-display: swap;
+} */
+
+@layer base {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  details>summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none
+  }
+
+  summary::after {
+    content: url("../assets/icons/caret-right.svg");
+    margin-top: 4px;
+    margin-left: 12px;
+  }
+
+  details[open] summary:after {
+    content: url("../assets/icons/caret-down.svg");
+    margin-bottom: 30px;
+    margin-left: 12px;
+  }
+
+  .container-1024 {
+    @apply max-w-screen-lg mx-auto px-4 md:px-0;
+  }
+
+  .container-960 {
+    @apply max-w-[960px] mx-auto px-4 md:px-0;
+  }
+
+  .btn-default {
+    @apply py-3 px-6 bg-primary hover:bg-secondary rounded-full text-white text-lg lg:text-xl shadow-btn hover:shadow-btn-hover transition-all duration-300;
+  }
+
+  .spacing {
+    @apply py-12 lg:py-24
+  }
+
+  h1 {
+    @apply text-4xl lg:text-6xl font-normal;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl font-normal;
+  }
+
+  h3 {
+    @apply text-xl lg:text-3xl font-normal;
+  }
+
+  h4 {
+    @apply text-2xl font-normal;
+  }
+
+  /* p {
+    @apply;
+  } */
+
+  strong {
+    @apply font-semibold;
+  }
+
+  .lista li::before {
+    content: "•";
+    color: #0FBAC0;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  .btn-menu-hamburger::after {
+    content: url("../assets/icons/list.svg");
+  }
+
+  .menu-mobile-list.active {
+    display: flex;
+    right: 0;
+  }
+
+  .btn-menu-hamburger.close::after {
+    content: url("../assets/icons/x.svg");
+  }
+}
