@@ -17,6 +17,11 @@ module.exports = {
       "tertiary": "#ffffff44",
       "quaternary": "#cccccc",
 
+      dark: {
+        "DEFAULT": '#121212',
+        "secondary": '#1a1a1a'
+      },
+
       "bg-primary": "#060606",
       "bg-secondary": "#040404",
       "bg-tertiary": "#111111",
