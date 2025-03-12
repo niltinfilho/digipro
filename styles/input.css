@@ -90,7 +90,7 @@
   }
 
   .btn-default {
-    @apply py-3 px-6 bg-primary hover:bg-secondary rounded-full text-white text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
+    @apply py-3 px-6 bg-primary hover:bg-secondary rounded-full text-white text-base md:text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
   }
 
   .spacing {
@@ -160,8 +160,6 @@
   header.scrolled {
     background-color: rgba(18, 18, 18, 0.95);
     box-shadow: 0 4px 20px rgba(0, 229, 255, 0.15);
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
     backdrop-filter: blur(10px);
     transform: translateY(0);
   }
