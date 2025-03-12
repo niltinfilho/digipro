@@ -1,671 +1,1061 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DigiPro - Sua parceira digital para o sucesso!</title>
-  <link rel="shortcut icon" href="assets/logo-digipro.png" type="image/x-icon" />
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/output.css" />
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiPro - Transformando ideias em soluções digitais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+    <style>
+        
+    </style>
 </head>
 
-<body class="w-full relative">
+<body class="bg-dark text-white leading-relaxed overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 bg-dark/90 backdrop-blur-sm z-50 shadow-lg shadow-primary/20 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-4 py-3 flex justify-between items-center">
+            <img src="assets/logo-digipro.svg" alt="DigiPro Logo" class="h-28 relative z-10">
 
-  <!-- HEADER DESKTOP -->
-  <!-- <header class="hidden lg:block bg-bg-primary pt-3 text-white">
-    <section class="container-1024 flex justify-between items-center">
-      <img src="assets/logo-digipro.svg" alt="Logo DigiPro" />
-      <nav class="w-full">
-        <ul class="flex gap-8 justify-end font-semibold">
-          <li><a href="#services" class="hover:underline hover:text-primary transition-colors">Serviços que
-              prestamos</a></li>
-          <li><a href="#method" class="hover:underline hover:text-primary transition-colors">Método DigiPro</a></li>
-          <li><a href="#success" class="hover:underline hover:text-primary transition-colors">Cases de sucesso</a></li>
-          <li><a href="#contact" class="hover:underline hover:text-primary transition-colors">Entrar em contato</a></li>
-        </ul>
-      </nav>
-    </section>
-  </header> -->
+            <!-- Menu para Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="menu-link relative hover:text-primary transition-colors">
+                    <span>Home</span>
+                </a>
+                <a href="#services" class="menu-link relative hover:text-primary transition-colors">
+                    <span>Serviços</span>
+                </a>
+                <a href="#about" class="menu-link relative hover:text-primary transition-colors">
+                    <span>Sobre</span>
+                </a>
+                <a href="#projects" class="menu-link relative hover:text-primary transition-colors">
+                    <span>Projetos</span>
+                </a>
+                <a href="#contact" class="menu-link relative hover:text-primary transition-colors">
+                    <span>Contato</span>
+                </a>
+            </nav>
 
-  <!-- HEADER MOBILE -->
-  <!-- <header class="lg:hidden bg-bg-primary pt-3 text-white">
-    <section class="container-1024">
-      <div class="flex justify-between items-center w-full">
-        <img src="assets/logo-digipro.svg" alt="Logo DigiPro" class="w-20" />
-        <span class="btn-menu-hamburger block"></span>
-      </div>
-      <nav class="w-full">
-        <ul
-          class="hidden menu-mobile-list absolute top-[120px] right-[-450px] bg-primary w-full flex-col gap-4 p-4 text-right justify-end font-semibold transition-all">
-          <li><a href="#services" class="hover:underline hover:text-primary transition-colors">Serviços que
-              prestamos</a></li>
-          <hr>
-          <li><a href="#method" class="hover:underline hover:text-primary transition-colors">Método DigiPro</a></li>
-          <hr>
-          <li><a href="#success" class="hover:underline hover:text-primary transition-colors">Cases de sucesso</a></li>
-          <hr>
-          <li><a href="#contact" class="hover:underline hover:text-primary transition-colors">Entrar em contato</a></li>
-        </ul>
-      </nav>
-    </section>
-  </header> -->
+            <!-- Menu para Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
 
-  <header
-    class="fixed w-full top-0 bg-bg-tertiary backdrop-blur-sm z-50 shadow-lg shadow-primary/20 transition-all duration-300">
-    <nav class="border-gray-200 px-4 lg:px-6 py-2.5">
-      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
-        <a href="https://flowbite.com" class="flex items-center">
-          <img src="assets/logo-digipro.svg" class="mr-3 w-24" alt="DigiPro Logo" />
-        </a>
-        <div class="lg:order-2">
-          <a href="#" class="btn-default">
-            Fale Conosco
-          </a>
-          <button data-collapse-toggle="mobile-menu-2" type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-2" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
+
+            <!-- Botão Fale Conosco -->
+            <a href="#contact" class="btn-default hover:text-white">
+                Fale Conosco
+            </a>
         </div>
-        <nav class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-          <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-            <li class="text-white m-0">
-              <a href="#" class="menu-link hover:text-primary transition-colors rounded relative" aria-current="page">
-                <span>
-                  Home
-                </span>
-              </a>
-            </li>
-            <li class="text-white">
-              <a href="#services" class="menu-link hover:text-primary transition-colors rounded relative"
-                aria-current="page">
-                <span>
-                  Serviços
-                </span>
-              </a>
-            </li>
-            <li class="text-white">
-              <a href="#method" class="menu-link hover:text-primary transition-colors rounded relative">
-                <span>
-                  Método
-                </span>
-              </a>
-            </li>
-            <li class="text-white">
-              <a href="#projects" class="menu-link hover:text-primary transition-colors rounded relative">
-                <span>
-                  Projetos
-                </span>
-              </a>
-            </li>
-            <li class="text-white">
-              <a href="#contact" class="menu-link hover:text-primary transition-colors rounded relative">
-                <span>
-                  Contato
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <main>
-
-    <!-- HERO SECTION -->
-    <section class="bg-bg-primary spacing text-white">
-      <article class="container-1024 flex flex-col lg:flex-row justify-between items-center">
-        <div class="flex flex-col items-start">
-          <h1>Transformamos <br><strong>Pequenos Negócios</strong><br> em <strong>Grandes Marcas</strong></h1>
-          <p class="mt-4 lg:mt-6 text-xl">Alcance mais clientes, gere mais vendas e fidelize seu público <br> com
-            estratégias de
-            marketing digital e tráfego
-            pago.</p>
-          <a href="#contact" class="btn-default mt-8 lg:mt-12">Comece agora!</a>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden">
+        <!-- Elementos de fundo animados -->
+        <div class="absolute inset-0">
+            <div class="absolute w-96 h-96 bg-primary/10 rounded-full filter blur-3xl animate-pulse top-1/4 -left-48">
+            </div>
+            <div
+                class="absolute w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse delay-1000 bottom-1/4 -right-48">
+            </div>
         </div>
 
+        <!-- Grid decorativo -->
+        <div
+            class="absolute inset-0 bg-[linear-gradient(rgba(18,18,18,0.5)_2px,transparent_2px),linear-gradient(90deg,rgba(18,18,18,0.5)_2px,transparent_2px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]">
+        </div>
 
-        <img src="assets/avatar-digipro.png" alt="Avatar DigiPro - Robô humanizado erguendo o braço"
-          class="hidden lg:block" />
-      </article>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="bg-bg-secondary spacing text-white">
-      <div class="container-1024 text-center">
-        <h2>Descubra como a DigiPro pode <strong>impulsionar</strong><br> a sua presença online e
-          <strong>transformar</strong> o seu negócio
-        </h2>
-        <p class="mt-6">Nosso foco é gerar vendas reais. Com estratégias personalizadas, seu negócio recebe
-          investimentos avançados e
-          consistentes.</p>
-        <article>
-          <div class="container-960 mt-12 lg:mt-20 flex flex-col gap-8">
-
-            <!-- TRÁFEGO PAGO -->
-            <div id="trafego-pago"
-              class="bg-bg-tertiary border border-tertiary rounded-3xl p-4 lg:p-8 flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between">
-              <div class="text-left">
-                <img src="assets/icons/rocket-launch-fill.svg" alt="Foguete decolando" />
-                <h3 class="mt-8">Tráfego Pago</h3>
-                <p class="mt-3 text-quaternary">Gestão dos seus anuncios online <br> no Google, Meta e TikTok</p>
-                <span class="block h-[1px] w-[265px] bg-primary mt-4"></span>
-                <ul class="lista mt-4 ml-4 text-sm">
-                  <li>Atraia seus clientes para seu funil de vendas.</li>
-                  <li class="my-4">Abasteca seu atendimento com <br> oportunidades de vendas.</li>
-                  <li>Tenha mais previsibilidade e mensure <br> o retorno do seu investimento.</li>
-                </ul>
-              </div>
-              <img src="assets/trafego-pago.svg" alt="Serviço de tráfego pago" class="w-96" />
-            </div>
-
-            <!-- SITES DE CONTEÚDO -->
-            <div id="sites-de-conteudo"
-              class="bg-bg-tertiary border border-tertiary rounded-3xl p-4 lg:p-8 flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between">
-              <div class="text-left">
-                <img src="assets/icons/browsers-fill.svg" alt="Abas de websites abertas" />
-                <h3 class="mt-8">Sites de Conteúdo</h3>
-                <p class="mt-3 text-quaternary">Lading pages projetadas para <br>
-                  trazer oportunidades de vendas</p>
-                <span class="block h-[1px] w-[265px] bg-primary mt-4"></span>
-                <ul class="lista mt-4 ml-4 text-sm">
-                  <li>Feitas com as melhores praticas do <br>
-                    mercado digital.</li>
-                  <li class="my-4">Facil de implementar e editar.</li>
-                  <li>Projetadas com as melhores <br>
-                    ferramentas do mercado.</li>
-                </ul>
-              </div>
-              <img src="assets/site-de-conteudo.svg" alt="Serviço de tráfego pago" class="w-96" />
-            </div>
-
-            <!-- SOLUÇÕES COMERCIAIS -->
-            <div id="solucoes-comerciais"
-              class="bg-bg-tertiary border border-tertiary rounded-3xl p-4 lg:p-8 flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between">
-              <div class="text-left">
-                <img src="assets/icons/currency-dollar-fill.svg" alt="Foguete decolando" />
-                <h3 class="mt-8">Soluções Comerciais</h3>
-                <p class="mt-3 text-quaternary">A expertise do nosso time de vendas <br> a disposição da sua empresa</p>
-                <span class="block h-[1px] w-[265px] bg-primary mt-4"></span>
-                <ul class="lista mt-4 ml-4 text-sm">
-                  <li>Estruturamos todo o seu comercial <br> do zero.</li>
-                  <li class="my-4">Treinamos e desenvolvemos seus <br> vendedores.</li>
-                  <li>Fornecemos nossos executivos para <br>
-                    venderem seu serviço/produto.</li>
-                </ul>
-              </div>
-              <img src="assets/solucoes-comerciais.svg" alt="Serviço de tráfego pago" class="w-96" />
-            </div>
-
-            <!-- DASHBOARD -->
-            <div id="dashboards"
-              class="bg-bg-tertiary border border-tertiary rounded-3xl p-4 lg:p-8 flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between">
-              <div class="text-left">
-                <img src="assets/icons/chart-bar-fill.svg" alt="Foguete decolando" />
-                <h3 class="mt-8">Dashboards</h3>
-                <p class="mt-3 text-quaternary">Gerencie as principais metricas <br> do seu negocio</p>
-                <span class="block h-[1px] w-[265px] bg-primary mt-4"></span>
-                <ul class="lista mt-4 ml-4 text-sm">
-                  <li>Tenha controle sobre os principais <br>
-                    indicadores da sua empresa.</li>
-                  <li class="my-4">Transforme dados em insights e <br>
-                    insights em boas decisoes.</li>
-                  <li>Acesse os dados a qualquer momento, <br>
-                    em qualquer dispositivo.</li>
-                </ul>
-              </div>
-              <img src="assets/dashboard.svg" alt="Serviço de tráfego pago" class="w-96" />
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- METHOD SECTION -->
-    <section id="method" class="bg-bg-primary text-white spacing">
-      <div class="container-960 text-center">
-        <h2>Conheça o <srong>método DigiPro</srong><br> para sua empresa <srong>nunca parar de vender</srong>
-        </h2>
-        <p class="mt-6">Alcance suas metas de marketing de forma estratégica e personalizada</p>
-        <article class="text-left mt-10 lg:mt-20 flex flex-col items-start">
-
-          <div class="relative w-full">
-            <div class="w-full flex items-center gap-0 lg:gap-6">
-              <span
-                class="flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-tertiary rounded-full text-xl lg:text-2xl text-primary font-bold">1.</span>
-              <h3 class="text-xl font-bold w-[87%] ml-4 lg:ml-0">Definir Objetivos Claros e Mensuráveis</h3>
-            </div>
-            <div class="ml-[52px] lg:ml-[84px] mt-7">
-              <p>Estabeleça metas específicas, como:</p>
-              <ul class="lista mt-5 ml-4">
-                <li>Aumentar o tráfego do site em 30% nos próximos 3 meses.</li>
-                <li class="my-3">Gerar 50 leads qualificados por mês.</li>
-                <li>Aumentar as vendas em 20% no próximo trimestre.</li>
-              </ul>
-            </div>
-            <span
-              class="absolute w-[1px] h-[272px] lg:h-[208px] bg-primary top-[60px] left-5 lg:top-[68px] lg:left-[26px]"></span>
-          </div>
-
-          <div class="mt-16 relative w-full">
-            <div class="flex items-center gap-0 lg:gap-6">
-              <span
-                class="flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-tertiary rounded-full text-xl lg:text-2xl text-primary font-bold">2.</span>
-              <h3 class="text-xl font-bold w-[87%] ml-4 lg:ml-0">Conhecer o Público-Alvo e Criar Personas</h3>
-            </div>
-            <div class="ml-[52px] lg:ml-[84px] mt-7">
-              <p>Identifique o perfil do cliente ideal com base em dados demográficos, comportamentos e interesses.</p>
-              <ul class="lista mt-5 ml-4">
-                <li>Realize pesquisas e colete feedback de clientes atuais.</li>
-                <li my-3>Crie personas detalhadas para guiar a criação de conteúdo e estratégias de segmentação.</li>
-              </ul>
-            </div>
-            <span
-              class="absolute w-[1px] h-[296px] lg:h-[160px] bg-primary top-[60px] left-5 lg:top-[68px] lg:left-[26px]"></span>
-          </div>
-
-          <div class="mt-16 relative w-full">
-            <div class="flex items-center  gap-0 lg:gap-6">
-              <span
-                class="flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-tertiary rounded-full text-xl lg:text-2xl text-primary font-bold">3.</span>
-              <h3 class="text-xl font-bold w-[87%] ml-4 lg:ml-0">Desenvolver e Executar Estratégias de Conteúdo e
-                Anúncios
-              </h3>
-            </div>
-            <ul class="ml-[66px] lg:ml-[100px] mt-7 lista">
-              <li>Marketing de Conteúdo: Produza conteúdos relevantes (artigos, vídeos, posts em redes sociais)
-                alinhados com as necessidades e interesses das personas.</li>
-              <li class="my-3">Anúncios Pagos: Utilize tráfego pago em Google Ads e Meta Ads
-                para alcançar um público maior e mais segmentado.</li>
-              <li>Automação e E-mail Marketing: Desenvolva funis de e-mail para nutrir leads e converter clientes em
-                potencial.</li>
-            </ul>
-            <span
-              class="absolute w-[1px] h-[348px] lg:h-[188px] bg-primary top-[74px] left-5 lg:top-[68px] lg:left-[26px]"></span>
-          </div>
-
-          <div class="mt-16 w-full">
-            <div class="flex items-center  gap-0 lg:gap-6">
-              <span
-                class="flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-tertiary rounded-full text-xl lg:text-2xl text-primary font-bold">4.</span>
-              <h3 class="text-xl font-bold w-[87%] ml-4 lg:ml-0">Monitorar, Analisar e Otimizar Resultados</h3>
-            </div>
-            <ul class="ml-[66px] lg:ml-[100px] mt-7 lista">
-              <li>Acompanhe o desempenho das campanhas usando ferramentas como Google Analytics e Meta Business Suite.
-              </li>
-              <li class="my-3">Analise métricas como taxa de conversão, CAC (Custo de Aquisição de Cliente) e ROI
-                (Retorno sobre
-                Investimento).</li>
-              <li>Faça ajustes constantes com base nos dados para otimizar as campanhas.</li>
-            </ul>
-          </div>
-
-          <a href="#contact" class="btn-default mt-10 lg:mt-20 self-center">Quero mais informações</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- SUCCESS SECTION -->
-    <section id="success" class="bg-bg-primary spacing">
-      <div class="container-1024 text-center text-white">
-        <h2>Mais de <strong>200 cases de sucesso</strong> registrados</h2>
-        <p class="mt-6">Projetos com resultados acima da média são transformados <br> em cases de sucesso. Conheça
-          alguns deles
-          abaixo.</p>
-
-        <article class="mt-10 lg:mt-20">
-          <div class="container-960 bg-bg-tertiary border border-tertiary rounded-3xl p-6 pb-10">
-            <small class="uppercase tracking-[0.2em] text-primary">Case de sucesso</small>
-
-            <div class="flex flex-col lg:flex-row justify-around items-center text-left mt-11">
-              <div class="relative">
-                <img src="assets/icons/quotes-fill.png" class="absolute top-0 left-0 w-32 h-3w-32 " alt="Aspas" />
-                <q>A DigiPro mudou minha campanha!</q>
-                <span class="block h-[1px] w-[265px] bg-primary mt-4"></span>
-                <div class="flex items-center gap-4 mt-10">
-                  <img src="assets/jean-vergilio.jpeg" alt="Jean Vergilio - Pré-candidato a vereador"
-                    class="w-16 h-16 rounded-full" />
-                  <div>
-                    <p class="font-bold">Jean Vergilio</p>
-                    <p class="text-sm text-quaternary">Pré-candidato a vereador</p>
-                  </div>
+        <div class="container mx-auto px-4 relative z-10 pt-20">
+            <div class="max-w-6xl mx-auto text-center">
+                <!-- Tag decorativa -->
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-8 backdrop-blur-sm border border-primary/20">
+                    <span class="animate-pulse w-2 h-2 rounded-full bg-primary mr-2"></span>
+                    <span class="text-primary text-sm font-medium">Inovação</span>
                 </div>
-              </div>
-              <span class="block lg:w-[1px] lg:h-48 w-80 h-[1px] my-8 lg:my-0 bg-tertiary"></span>
-              <h3 class="text-4xl font-bold text-center lg:text-left">
-                +1.000 seguidores <br>
-                no Instagram <br>
-                para sua campanha <br>
-                de eleição
-              </h3>
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-blue-500/10 rounded-full mb-8 backdrop-blur-sm border border-blue-500/20">
+                    <span class="animate-pulse w-2 h-2 rounded-full bg-blue-500 mr-2"></span>
+                    <span class="text-blue-500 text-sm font-medium">Marketing Digital</span>
+                </div>
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-purple-500/10 rounded-full mb-8 backdrop-blur-sm border border-purple-500/20">
+                    <span class="animate-pulse w-2 h-2 rounded-full bg-purple-500 mr-2"></span>
+                    <span class="text-purple-500 text-sm font-medium">Gestão de Negócio</span>
+                </div>
+
+                <!-- Título principal com efeito de gradiente -->
+                <h1
+                    class="uppercase md:leading-tight text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-primary to-blue-400 bg-clip-text text-transparent">
+                    Transformando ideias em soluções digitais
+                </h1>
+
+                <!-- Subtítulo com melhor contraste e legibilidade -->
+                <p class="text-gray-300 max-w-3xl mx-auto mb-12 text-xl leading-relaxed backdrop-blur-sm">
+                    A DigiPro desenvolve soluções tecnológicas de marketing personalizadas para o seu negócio,
+                    <span class="text-primary">potencializando sua presença digital</span> com estratégia e inovação.
+                </p>
+
+                <!-- Grupo de botões -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#services"
+                        class="btn-default px-8 py-4 shadow-none hover:shadow-none hover:bg-primary/60 hover:text-white flex items-center">
+                        Conheça nossos serviços
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-4 rounded-full font-semibold border border-primary/30 hover:bg-primary/10 transition-all flex items-center">
+                        Fale Conosco
+                    </a>
+                </div>
+
             </div>
-          </div>
-        </article>
-      </div>
+        </div>
+
+        <!-- Indicadores de rolagem -->
+        <div id="scroll-down-btn" class="absolute bottom-10 flex flex-col items-center cursor-pointer">
+            <small class="text-gray-400 mb-2 transition-all duration-300 group-hover:text-primary">Role para
+                baixo</small>
+            <div class="relative">
+                <svg class="w-8 h-8 text-primary bg-bg-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                <span
+                    class="animate-ping absolute top-0 inline-flex h-full w-full rounded-full bg-primary opacity-20"></span>
+            </div>
+        </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="bg-bg-tertiary">
-      <article
-        class="container-960 flex flex-col-reverse lg:flex-row items-center gap-y-12 lg:gap-y-0 lg:gap-x-40 spacing">
-        <img src="assets/avatar-digipro.png" alt="Avatar DigiPro - Robô humanizado erguendo o braço">
-
-        <div class="text-white flex flex-col items-center lg:items-start">
-          <h2 class="text-center lg:text-left">Dar o próximo passo <br> leva <strong>menos de um minuto</strong></h2>
-          <p class="mt-6 text-center lg:text-left">Entre em contato e um especialista irá te atender para entender suas
-            necessidades e
-            oferecer a
-            melhor estratégia para o seu negócio.</p>
-          <a href="#" class="btn-default mt-12">Fale com um especialista</a>
+    <!-- Stats Section -->
+    <section class="bg-dark-secondary py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-primary text-4xl font-bold mb-2">500+</div>
+                    <div class="text-gray-300">Projetos Entregues</div>
+                </div>
+                <div>
+                    <div class="text-primary text-4xl font-bold mb-2">150+</div>
+                    <div class="text-gray-300">Clientes Ativos</div>
+                </div>
+                <div>
+                    <div class="text-primary text-4xl font-bold mb-2">50+</div>
+                    <div class="text-gray-300">Especialistas</div>
+                </div>
+                <div>
+                    <div class="text-primary text-4xl font-bold mb-2">5+</div>
+                    <div class="text-gray-300">Anos no Mercado</div>
+                </div>
+            </div>
         </div>
-      </article>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="bg-bg-primary text-white spacing">
-      <article class="container-960 flex flex-col items-center">
-        <h2 class="text-center">Perguntas frequentes</h2>
-        <p class="mt-6 text-center">Compilado das dúvidas mais frequentes sobre como funcionam os produtos e o
-          atendimento da DigiPro</p>
+    <!-- Services Section -->
+    <section id="services" class="bg-dark py-20">
+        <div class="max-w-screen-2xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Descubra como a DigiPro pode <strong>impulsionar</strong><br> a sua
+                    presença online e <strong>transformar</strong> o seu negócio</h2>
+                <p class="text-gray-300">Nosso foco é gerar vendas reais. Com estratégias personalizadas, seu negócio
+                    recebe investimentos avançados e consistentes.</p>
+            </div>
 
-        <div class="mt-10 lg:mt-20 w-full flex flex-col gap-4">
-          <details class="bg-bg-tertiary lg:px-6 border border-tertiary rounded-2xl cursor-pointer">
-            <summary class="font-semibold px-4 py-3 flex items-center justify-between">A DigiPro cobra multa no
-              cancelamento do contrato?</summary>
-            <div class="py-4 px-4">
-              <p>Não, a DigiPro não cobra multa pelo cancelamento do contrato. No entanto, é importante entender nossa
-                política de aviso prévio.</p>
-              <p class="py-6">Nos primeiros 90 dias de contrato, solicitamos um aviso prévio de 60 dias para o
-                cancelamento. Após esse período inicial, o aviso prévio necessário para cancelamento é de 30 dias. Isso
-                significa que, mesmo sem multa, pedimos que você nos avise com antecedência para que possamos encerrar
-                nossos serviços de maneira organizada e garantir uma transição suave.</p>
-              <p>Nosso objetivo é oferecer a você a flexibilidade e a tranquilidade de poder encerrar o contrato quando
-                necessário, ao mesmo tempo em que asseguramos um processo de finalização que respeite ambas as partes.
-              </p>
+            <!-- Swiper -->
+            <div class="swiper servicesSwiper max-w-6xl mx-auto px-4 lg:px-0">
+                <div class="swiper-wrapper pb-10">
+                    <!-- TRÁFEGO PAGO -->
+                    <div class="swiper-slide">
+                        <div
+                            class="service-card bg-dark p-8 rounded-3xl border border-primary/20 flex flex-col lg:flex-row gap-8 items-center h-full">
+                            <div class="service-card-content lg:w-1/2">
+                                <img src="assets/icons/rocket-launch-fill.svg" alt="Foguete decolando"
+                                    class="service-icon w-12 h-12" />
+                                <h3 class="service-title text-2xl font-semibold mt-8">Tráfego Pago</h3>
+                                <p class="service-description mt-3 text-gray-400">Gestão dos seus anúncios online no
+                                    Google, Meta e TikTok
+                                </p>
+                                <div class="service-divider h-px w-64 bg-primary my-6"></div>
+                                <ul class="service-list space-y-4 text-gray-300">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Atraia seus clientes para seu funil de vendas
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Abasteca seu atendimento com oportunidades de vendas
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Tenha mais previsibilidade e mensure o retorno do seu investimento
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:w-1/2">
+                                <img src="assets/trafego-pago.svg" alt="Serviço de tráfego pago"
+                                    class="service-image w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SITES DE CONTEÚDO -->
+                    <div class="swiper-slide">
+                        <div
+                            class="service-card bg-dark p-8 rounded-3xl border border-primary/20 flex flex-col lg:flex-row gap-8 items-center h-full">
+                            <div class="service-card-content lg:w-1/2">
+                                <img src="assets/icons/browsers-fill.svg" alt="Abas de websites abertas"
+                                    class="service-icon w-12 h-12" />
+                                <h3 class="service-title text-2xl font-semibold mt-8">Sites de Conteúdo</h3>
+                                <p class="service-description mt-3 text-gray-400">Landing pages projetadas para trazer
+                                    oportunidades de
+                                    vendas</p>
+                                <div class="service-divider h-px w-64 bg-primary my-6"></div>
+                                <ul class="service-list space-y-4 text-gray-300">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Feitas com as melhores práticas do mercado digital
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Fácil de implementar e editar
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Projetadas com as melhores ferramentas do mercado
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:w-1/2">
+                                <img src="assets/site-de-conteudo.svg" alt="Sites de Conteúdo"
+                                    class="service-image w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOLUÇÕES COMERCIAIS -->
+                    <div class="swiper-slide">
+                        <div
+                            class="service-card bg-dark p-8 rounded-3xl border border-primary/20 flex flex-col lg:flex-row gap-8 items-center h-full">
+                            <div class="service-card-content lg:w-1/2">
+                                <img src="assets/icons/currency-dollar-fill.svg" alt="Ícone de dólar"
+                                    class="service-icon w-12 h-12" />
+                                <h3 class="service-title text-2xl font-semibold mt-8">Soluções Comerciais</h3>
+                                <p class="service-description mt-3 text-gray-400">A expertise do nosso time de vendas a
+                                    disposição da sua
+                                    empresa</p>
+                                <div class="service-divider h-px w-64 bg-primary my-6"></div>
+                                <ul class="service-list space-y-4 text-gray-300">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Estruturamos todo o seu comercial do zero
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Treinamos e desenvolvemos seus vendedores
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Fornecemos nossos executivos para venderem seu serviço/produto
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:w-1/2">
+                                <img src="assets/solucoes-comerciais.svg" alt="Soluções Comerciais"
+                                    class="service-image w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DASHBOARDS -->
+                    <div class="swiper-slide">
+                        <div
+                            class="service-card bg-dark p-8 rounded-3xl border border-primary/20 flex flex-col lg:flex-row gap-8 items-center h-full">
+                            <div class="service-card-content lg:w-1/2">
+                                <img src="assets/icons/chart-bar-fill.svg" alt="Ícone de gráfico"
+                                    class="service-icon w-12 h-12" />
+                                <h3 class="service-title text-2xl font-semibold mt-8">Dashboards</h3>
+                                <p class="service-description mt-3 text-gray-400">Gerencie as principais métricas do seu
+                                    negócio</p>
+                                <div class="service-divider h-px w-64 bg-primary my-6"></div>
+                                <ul class="service-list space-y-4 text-gray-300">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Tenha controle sobre os principais indicadores da sua empresa
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Transforme dados em insights e insights em boas decisões
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                        Acesse os dados a qualquer momento, em qualquer dispositivo
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:w-1/2">
+                                <img src="assets/dashboard.svg" alt="Dashboard" class="service-image w-full" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navegação -->
+                <div class="services-navigation-container">
+                    <div class="swiper-button-next" aria-label="Próximo slide"></div>
+                    <div class="swiper-button-prev" aria-label="Slide anterior"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-          </details>
-          <details class="bg-bg-tertiary lg:px-6 border border-tertiary rounded-2xl cursor-pointer">
-            <summary class="font-semibold px-4 py-3 flex items-center justify-between">Já possuo um time de marketing na
-              minha empresa, devo contratar a DigiPro?</summary>
-            <div class="py-4 px-4">
-              <p>Sim, faz todo o sentido conversar conosco, mesmo que você já tenha um time de marketing interno. Na
-                DigiPro, trabalhamos em parceria com as equipes de marketing dos nossos clientes para potencializar os
-                resultados. Nosso objetivo é somar forças e agregar valor ao que já está sendo feito internamente.</p>
-              <p class="pt-6">Nós trazemos uma expertise especializada e um olhar externo que podem identificar
-                oportunidades e implementar estratégias complementares às suas iniciativas atuais. Além disso, podemos
-                oferecer ferramentas, tecnologias e metodologias que talvez ainda não estejam sendo exploradas pelo seu
-                time interno.</p>
-            </div>
-          </details>
-          <details class="bg-bg-tertiary lg:px-6 border border-tertiary rounded-2xl cursor-pointer">
-            <summary class="font-semibold px-4 py-3 flex items-center justify-between">O marketing digital da DigiPro
-              realmente vai trazer resultados para a minha empresa?</summary>
-            <div class="py-4 px-4">
-              <p>Absolutamente. Na DigiPro, construímos nossa reputação com base em resultados sólidos. Nossa equipe de
-                especialistas em marketing digital possui experiência e um histórico comprovado de sucesso no aumento da
-                visibilidade e no crescimento de empresas de diversos segmentos.</p>
-              <p class="pt-6">Nossos clientes são nosso melhor exemplo, e você pode conferir nossos resultados. Confira
-                nossos cases de sucesso aqui: <a href="#success"
-                  class="text-primary hover:text-secondary transition-colors underline">Cases DigiPro</a>.</p>
-            </div>
-          </details>
-          <details class="bg-bg-tertiary lg:px-6 border border-tertiary rounded-2xl cursor-pointer">
-            <summary class="font-semibold px-4 py-3 flex items-center justify-between">Em quanto tempo terei resultados
-              com a DigiPro?</summary>
-            <div class="py-4 px-4">
-              <p>O tempo para obter resultados pode variar dependendo de diversos fatores, como a natureza do seu
-                negócio, o mercado em que você atua, os objetivos específicos que você deseja alcançar e as estratégias
-                implementadas.</p>
-              <p class="py-6">Em geral, algumas ações de marketing digital podem começar a mostrar resultados iniciais
-                em poucas semanas, especialmente campanhas de mídia paga e otimizações rápidas em redes sociais. No
-                entanto, é importante entender que o marketing digital é um investimento contínuo e que estratégias mais
-                robustas podem levar alguns meses para mostrar resultados significativos.</p>
-              <p>Nosso compromisso é trabalhar em conjunto com você para definir expectativas realistas e metas claras
-                desde o início. Monitoramos constantemente o desempenho das campanhas e fazemos ajustes necessários para
-                garantir que você esteja no caminho certo para alcançar os melhores resultados possíveis.</p>
-            </div>
-          </details>
-          <details class="bg-bg-tertiary lg:px-6 border border-tertiary rounded-2xl cursor-pointer">
-            <summary class="font-semibold px-4 py-3 flex items-center justify-between">A DigiPro oferece serviços de
-              marketing para diferentes setores da minha empresa?</summary>
-            <div class="py-4 px-4">
-              <p>Sim, a DigiPro está preparada para atender às necessidades de marketing de vários setores da sua
-                empresa. Nosso modelo de assessoria modular nos permite atuar de acordo com as necessidades e o momento
-                específico de cada cliente.</p>
-              <p class="py-6">Isso significa que podemos desenvolver e executar estratégias personalizadas para
-                diferentes áreas do seu negócio, garantindo que cada setor receba a atenção e o suporte necessários para
-                alcançar seus objetivos.</p>
-            </div>
-          </details>
         </div>
-      </article>
-
-
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-bg-primary spacing pb-4 px-4">
-      <article
-        class="container-1024 text-white text-center lg:text-left p-5 bg-bg-tertiary border border-tertiary rounded-3xl flex flex-col lg:flex-row items-center gap-y-10 lg:justify-between">
-        <img src="assets/logo-digipro.svg" alt="Logo DigiPro" class="w-32 lg:w-auto" />
-        <div>
-          <p class="uppercase text-sm text-primary">Serviços</p>
-          <ul class="text-quaternary text-sm mt-4 flex flex-col gap-2">
-            <li><a href="#trafego-pago" class="hover:text-white">Tráfego Pago</a></li>
-            <li><a href="#sites-de-conteudo" class="hover:text-white">Sites de Conteúdo</a></li>
-            <li><a href="#solucoes-comerciais" class="hover:text-white">Soluções Comerciais</a></li>
-            <li><a href="#dashboards" class="hover:text-white">Dashboards</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="uppercase text-sm text-primary">Método DigiPro</p>
-          <ul class="text-quaternary text-sm mt-4 flex flex-col gap-2">
-            <li><a href="#method" class="hover:text-white">Objetivos claros e mensuráveis</a></li>
-            <li><a href="#method" class="hover:text-white">Conhecer o público-alvo</a></li>
-            <li><a href="#method" class="hover:text-white">Estratégias de conteúdo e anúncios</a></li>
-            <li><a href="#method" class="hover:text-white">Monitorar, analisar e otimizar resultados</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="uppercase text-sm text-primary">Perguntas frequentes</p>
-          <ul class="text-quaternary text-sm mt-4 flex flex-col gap-2">
-            <li><a href="#faq" class="hover:text-white">Multa de cancelamento</a></li>
-            <li><a href="#faq" class="hover:text-white">Resultado garantido</a></li>
-            <li><a href="#faq" class="hover:text-white">Resultado em quanto tempo</a></li>
-            <li><a href="#faq" class="hover:text-white">Serviços de marketing personalizado</a></li>
-          </ul>
-        </div>
-      </article>
-
-      <div
-        class="container-960 items-center gap-y-2 flex-col lg:flex-row text-quaternary text-sm mt-20 flex justify-between">
-        <p>&copy; 2025 DigiProLTDA - Todos os direitos reservados.</p>
-        <div class="flex gap-4">
-          <a href="#" class="hover:text-white">Política de Privacidade</a>
-          <span class="block h-4 w-[1px] bg-quaternary"></span>
-          <a href="#" class="hover:text-white">Termos de Uso</a>
-        </div>
-        <p class="hover:text-white">Designed by <a href="#">Nilton Filho</a></p>
-      </div>
-    </footer>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  <!-- <script src="scripts/scroll.js"></script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Seleciona todos os links do menu que apontam para âncoras
-      const menuLinks = document.querySelectorAll('a[href^="#"]');
-
-      // Adiciona evento de clique a cada link
-      menuLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          // Previne o comportamento padrão do link
-          e.preventDefault();
-
-          // Obtém o alvo da âncora a partir do atributo href
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            // Calcula a posição do elemento alvo
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-            // Usa a mesma animação lenta e suave do botão "Role para baixo"
-            smoothScrollTo(targetPosition, 1500); // 1500ms = 1.5 segundos
-          }
-        });
-      });
-
-      // Botão "Role para baixo" com animação mais lenta
-      const scrollDownBtn = document.getElementById('scroll-down-btn');
-      if (scrollDownBtn) {
-        scrollDownBtn.addEventListener('click', function () {
-          // Obtém a altura da janela
-          const windowHeight = window.innerHeight;
-          const statsSection = document.querySelector('.bg-dark-secondary');
-
-          if (statsSection) {
-            // Implementa uma animação de rolagem mais lenta e suave
-            smoothScrollTo(statsSection.offsetTop, 1500); // 1500ms = 1.5 segundos
-          } else {
-            // Caso não encontre a seção, rola uma altura de tela
-            smoothScrollTo(windowHeight, 1500);
-          }
-        });
-      }
-
-      // Função para rolagem suave com duração personalizada
-      function smoothScrollTo(targetPosition, duration) {
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition;
-        let startTime = null;
-
-        function animation(currentTime) {
-          if (startTime === null) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const scrollY = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-          window.scrollTo(0, scrollY);
-
-          if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-          }
-        }
-
-        // Função de easing para suavizar o movimento
-        function easeInOutQuad(t, b, c, d) {
-          t /= d / 2;
-          if (t < 1) return c / 2 * t * t + b;
-          t--;
-          return -c / 2 * (t * (t - 2) - 1) + b;
-        }
-
-        requestAnimationFrame(animation);
-      }
-
-      // Controle de animação do header durante a rolagem
-      const header = document.querySelector('header');
-      let lastScrollTop = 0;
-      let scrollThreshold = 100; // Limite para considerar a rolagem significativa
-
-      window.addEventListener('scroll', function () {
-        let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Adiciona classe 'scrolled' quando a página é rolada para baixo
-        if (currentScrollTop > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-
-        // Esconde o header quando rola para baixo e mostra quando rola para cima
-        if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
-          // Rolando para baixo
-          header.classList.add('hidden');
-        } else {
-          // Rolando para cima
-          header.classList.remove('hidden');
-        }
-
-        lastScrollTop = currentScrollTop;
-
-        // Destaca o item de menu ativo com base na seção visível
-        highlightActiveMenuItem();
-      });
-
-      // Função para destacar o item de menu ativo
-      function highlightActiveMenuItem() {
-        // Obtém todas as seções
-        const sections = document.querySelectorAll('section[id]');
-
-        // Determina qual seção está visível na tela
-        let activeSection = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          const scrollPosition = window.pageYOffset;
-
-          // Verifica se a seção está visível na tela
-          if (scrollPosition >= sectionTop - 200 &&
-            scrollPosition < sectionTop + sectionHeight - 200) {
-            activeSection = '#' + section.getAttribute('id');
-          }
-        });
-
-        // Remove a classe 'text-primary' de todos os links do menu
-        menuLinks.forEach(link => {
-          link.classList.remove('text-primary');
-          link.classList.add('hover:text-primary');
-        });
-
-        // Adiciona a classe 'text-primary' ao link ativo
-        if (activeSection) {
-          const activeLink = document.querySelector(`a[href="${activeSection}"]`);
-          if (activeLink) {
-            activeLink.classList.add('text-primary');
-
-            // Adiciona um efeito visual ao link ativo
-            const activeLinkRect = activeLink.getBoundingClientRect();
-            const headerRect = header.getBoundingClientRect();
-
-            // Cria um efeito de pulso no link ativo
-            if (!activeLink.querySelector('.pulse-effect')) {
-              const pulseEffect = document.createElement('span');
-              pulseEffect.classList.add('pulse-effect');
-              pulseEffect.style.cssText = `
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: rgba(0, 229, 255, 0.5);
-                top: 50%;
-                left: -15px;
-                transform: translateY(-50%);
-                animation: pulse 1.5s infinite;
-              `;
-              activeLink.appendChild(pulseEffect);
+    <script>
+        var servicesSwiper = new Swiper(".servicesSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 500,
+            effect: "slide",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 1,
+            },
+            navigation: {
+                nextEl: ".services-navigation-container .swiper-button-next",
+                prevEl: ".services-navigation-container .swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    effect: "slide",
+                },
+                1024: {
+                    slidesPerView: 1.3,
+                    centeredSlides: true,
+                }
+            },
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            preventInteractionOnTransition: true,
+            a11y: {
+                prevSlideMessage: 'Slide anterior',
+                nextSlideMessage: 'Próximo slide',
+                firstSlideMessage: 'Este é o primeiro slide',
+                lastSlideMessage: 'Este é o último slide',
+                paginationBulletMessage: 'Ir para o slide {{index}}',
             }
-          }
-        }
-      }
+        });
 
-      // Destaca o item de menu ativo na carga inicial da página
-      highlightActiveMenuItem();
-    });
-  </script>
+        // Inicializa as animações após o carregamento da página
+        window.addEventListener('load', function () {
+            // Adiciona classe para ativar animações no slide inicial
+            setTimeout(function () {
+                const activeSlide = document.querySelector('.servicesSwiper .swiper-slide-active');
+                if (activeSlide) {
+                    activeSlide.classList.add('animated');
+                }
+
+                // Ajusta a posição dos botões de navegação em dispositivos desktop
+                if (window.innerWidth >= 1024) {
+                    const serviceCards = document.querySelector('.service-card');
+                    if (serviceCards) {
+                        const cardHeight = serviceCards.offsetHeight;
+                        const navButtons = document.querySelectorAll('.services-navigation-container .swiper-button-next, .services-navigation-container .swiper-button-prev');
+                        navButtons.forEach(button => {
+                            button.style.top = (cardHeight / 2) + 'px';
+                        });
+                    }
+                }
+            }, 500);
+        });
+
+        // Adiciona eventos para animações suaves durante as transições
+        servicesSwiper.on('slideChangeTransitionStart', function () {
+            // Remove a classe animated de todos os slides
+            document.querySelectorAll('.servicesSwiper .swiper-slide').forEach(function (slide) {
+                slide.classList.remove('animated');
+            });
+        });
+
+        servicesSwiper.on('slideChangeTransitionEnd', function () {
+            // Adiciona a classe animated apenas ao slide ativo
+            const activeSlide = document.querySelector('.servicesSwiper .swiper-slide-active');
+            if (activeSlide) {
+                activeSlide.classList.add('animated');
+            }
+        });
+    </script>
+
+    <!-- Method Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Conheça o <strong>método DigiPro</strong><br> para sua empresa
+                    <strong>nunca parar de vender</strong>
+                </h2>
+                <p class="text-gray-300">Alcance suas metas de marketing de forma estratégica e personalizada</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-16">
+                <!-- Etapa 1 -->
+                <div class="relative">
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="flex items-center justify-center w-14 h-14 bg-dark rounded-full text-2xl text-primary font-bold">1</span>
+                        <h3 class="text-xl font-bold">Definir Objetivos Claros e Mensuráveis</h3>
+                    </div>
+                    <div class="ml-20 mt-6">
+                        <p class="text-gray-300">Estabeleça metas específicas, como:</p>
+                        <ul class="mt-4 space-y-3 text-gray-300">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Aumentar o tráfego do site em 30% nos próximos 3 meses
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Gerar 50 leads qualificados por mês
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Aumentar as vendas em 20% no próximo trimestre
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-7 top-14 w-px h-full bg-primary"></div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="relative">
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="flex items-center justify-center w-14 h-14 bg-dark rounded-full text-2xl text-primary font-bold">2</span>
+                        <h3 class="text-xl font-bold">Conhecer o Público-Alvo e Criar Personas</h3>
+                    </div>
+                    <div class="ml-20 mt-6">
+                        <p class="text-gray-300">Identifique o perfil do cliente ideal com base em dados demográficos,
+                            comportamentos e interesses.</p>
+                        <ul class="mt-4 space-y-3 text-gray-300">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Realize pesquisas e colete feedback de clientes atuais
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Crie personas detalhadas para guiar a criação de conteúdo e estratégias de segmentação
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-7 top-14 w-px h-full bg-primary"></div>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="relative">
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="flex items-center justify-center w-14 h-14 bg-dark rounded-full text-2xl text-primary font-bold">3</span>
+                        <h3 class="text-xl font-bold">Desenvolver e Executar Estratégias de Conteúdo e Anúncios</h3>
+                    </div>
+                    <div class="ml-20 mt-6">
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Marketing de Conteúdo: Produza conteúdos relevantes alinhados com as necessidades e
+                                interesses das personas
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Anúncios Pagos: Utilize tráfego pago em Google Ads e Meta Ads para alcançar um público
+                                maior e mais segmentado
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Automação e E-mail Marketing: Desenvolva funis de e-mail para nutrir leads e converter
+                                clientes em potencial
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-7 top-14 w-px h-full bg-primary"></div>
+                </div>
+
+                <!-- Etapa 4 -->
+                <div class="relative">
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="flex items-center justify-center w-14 h-14 bg-dark rounded-full text-2xl text-primary font-bold">4</span>
+                        <h3 class="text-xl font-bold">Monitorar, Analisar e Otimizar Resultados</h3>
+                    </div>
+                    <div class="ml-20 mt-6">
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Acompanhe o desempenho das campanhas usando ferramentas como Google Analytics e Meta
+                                Business Suite
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Analise métricas como taxa de conversão, CAC (Custo de Aquisição de Cliente) e ROI
+                                (Retorno sobre Investimento)
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Faça ajustes constantes com base nos dados para otimizar as campanhas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center pt-8">
+                    <a href="#contact"
+                        class="bg-primary text-dark px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:-translate-y-0.5">
+                        Quero mais informações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">Sobre a DigiPro</h2>
+                    <p class="text-gray-300 mb-4">
+                        Fundada com a missão de trazer soluções inovadoras para o mercado, a DigiPro se destaca pela
+                        excelência técnica e pelo compromisso com os resultados dos clientes.
+                    </p>
+                    <!-- Mais parágrafos -->
+                    <a href="#contact"
+                        class="bg-primary text-dark px-8 py-3 rounded-full inline-block font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:-translate-y-0.5 mt-6">
+                        Entre em contato
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="assets/esquipe.jpg" alt="Equipe DigiPro" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-4xl font-bold inline-block relative after:content-[''] after:block after:w-1/2 after:h-1 after:bg-primary after:mx-auto after:mt-4 after:shadow-lg after:shadow-primary/50">
+                    Nossos Projetos
+                </h2>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper projectsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Projeto 1 -->
+                    <div class="swiper-slide">
+                        <div class="group relative overflow-hidden rounded-xl mx-2">
+                            <img src="assets/dashboard.svg" alt="Projeto 1"
+                                class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-2xl font-bold mb-2">App Financeiro</h3>
+                                <p class="text-gray-300 text-lg">Aplicativo mobile para gestão financeira pessoal</p>
+                                <a href="#"
+                                    class="mt-4 text-primary hover:text-white transition-colors inline-flex items-center">
+                                    Ver detalhes
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="swiper-slide">
+                        <div class="group relative overflow-hidden rounded-xl mx-2">
+                            <img src="assets/dashboard.svg" alt="Projeto 2"
+                                class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
+                                <p class="text-gray-300 text-lg">Plataforma completa de e-commerce B2B</p>
+                                <a href="#"
+                                    class="mt-4 text-primary hover:text-white transition-colors inline-flex items-center">
+                                    Ver detalhes
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="swiper-slide">
+                        <div class="group relative overflow-hidden rounded-xl mx-2">
+                            <img src="assets/dashboard.svg" alt="Projeto 3"
+                                class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-2xl font-bold mb-2">Sistema ERP</h3>
+                                <p class="text-gray-300 text-lg">Sistema integrado de gestão empresarial</p>
+                                <a href="#"
+                                    class="mt-4 text-primary hover:text-white transition-colors inline-flex items-center">
+                                    Ver detalhes
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div class="swiper-slide">
+                        <div class="group relative overflow-hidden rounded-xl mx-2">
+                            <img src="assets/dashboard.svg" alt="Projeto 3"
+                                class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-2xl font-bold mb-2">Sistema ERP</h3>
+                                <p class="text-gray-300 text-lg">Sistema integrado de gestão empresarial</p>
+                                <a href="#"
+                                    class="mt-4 text-primary hover:text-white transition-colors inline-flex items-center">
+                                    Ver detalhes
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adiciona navegação -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Adiciona paginação -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <script>
+            var swiper = new Swiper(".projectsSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+                effect: "coverflow",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+            });
+        </script>
+    </section>
+
+    <!-- Perguntas frequentes -->
+    <section class="py-20 bg-dark-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-4xl font-bold inline-block relative after:content-[''] after:block after:w-1/2 after:h-1 after:bg-primary after:mx-auto after:mt-4 after:shadow-lg after:shadow-primary/50">
+                    Perguntas Frequentes
+                </h2>
+                <p class="text-gray-300 mt-4">Compilado das dúvidas mais frequentes sobre nossos produtos e atendimento
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- Pergunta 1 -->
+                <div class="bg-dark rounded-lg overflow-hidden">
+                    <details class="group">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer">
+                            <h3 class="text-lg font-semibold">Como funciona o processo de contratação?</h3>
+                            <span class="text-primary group-open:rotate-180 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-300">
+                            Iniciamos com uma reunião de diagnóstico para entender suas necessidades. Em seguida,
+                            apresentamos uma proposta personalizada com escopo, prazos e investimento. Após aprovação,
+                            iniciamos o desenvolvimento do projeto.
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="bg-dark rounded-lg overflow-hidden">
+                    <details class="group">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer">
+                            <h3 class="text-lg font-semibold">Qual o prazo médio de entrega dos projetos?</h3>
+                            <span class="text-primary group-open:rotate-180 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-300">
+                            O prazo varia de acordo com a complexidade do projeto. Geralmente, sites institucionais
+                            levam de 30 a 45 dias, enquanto sistemas mais complexos podem levar de 3 a 6 meses.
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="bg-dark rounded-lg overflow-hidden">
+                    <details class="group">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer">
+                            <h3 class="text-lg font-semibold">Vocês oferecem suporte após a entrega?</h3>
+                            <span class="text-primary group-open:rotate-180 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-300">
+                            Sim! Oferecemos 3 meses de suporte gratuito após a entrega do projeto. Após esse período,
+                            disponibilizamos planos de manutenção mensais para garantir o funcionamento contínuo da sua
+                            solução.
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="bg-dark rounded-lg overflow-hidden">
+                    <details class="group">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer">
+                            <h3 class="text-lg font-semibold">Como é feito o pagamento?</h3>
+                            <span class="text-primary group-open:rotate-180 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-300">
+                            Trabalhamos com entrada de 40% para início do projeto e o restante pode ser parcelado
+                            durante o desenvolvimento. Aceitamos diversas formas de pagamento, incluindo cartão de
+                            crédito, boleto e PIX.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl font-bold inline-block relative after:content-[''] after:block after:w-1/2 after:h-1 after:bg-primary after:mx-auto after:mt-4 after:shadow-lg after:shadow-primary/50">
+                        Entre em Contato
+                    </h2>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nome</label>
+                            <input type="text" placeholder="Nome completo"
+                                class="w-full px-4 py-3 bg-dark rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" placeholder="E-mail"
+                                class="w-full px-4 py-3 bg-dark rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Telefone</label>
+                        <input type="tel" placeholder="Telefone"
+                            class="w-full px-4 py-3 bg-dark rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Assunto</label>
+                        <input type="text"
+                            class="w-full px-4 py-3 bg-dark rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Mensagem</label>
+                        <textarea rows="4" placeholder="Mensagem"
+                            class="w-full px-4 py-3 bg-dark rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-primary text-dark px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:-translate-y-0.5">
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="assets/logo-digipro.svg" alt="DigiPro Logo" class="h-36 mb-4">
+                    <p class="text-gray-400">Transformando ideias em soluções digitais inovadoras.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors">Serviços</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">Sobre</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-primary transition-colors">Projetos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>contato@digipro.com</li>
+                        <li>(11) 99999-9999</li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 DigiPro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para animação suave de rolagem -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Seleciona todos os links do menu que apontam para âncoras
+            const menuLinks = document.querySelectorAll('a[href^="#"]');
+
+            // Adiciona evento de clique a cada link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // Previne o comportamento padrão do link
+                    e.preventDefault();
+
+                    // Obtém o alvo da âncora a partir do atributo href
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Calcula a posição do elemento alvo
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+                        // Usa a mesma animação lenta e suave do botão "Role para baixo"
+                        smoothScrollTo(targetPosition, 1500); // 1500ms = 1.5 segundos
+                    }
+                });
+            });
+
+            // Botão "Role para baixo" com animação mais lenta
+            const scrollDownBtn = document.getElementById('scroll-down-btn');
+            if (scrollDownBtn) {
+                scrollDownBtn.addEventListener('click', function () {
+                    // Obtém a altura da janela
+                    const windowHeight = window.innerHeight;
+                    const statsSection = document.querySelector('.bg-dark-secondary');
+
+                    if (statsSection) {
+                        // Implementa uma animação de rolagem mais lenta e suave
+                        smoothScrollTo(statsSection.offsetTop, 1500); // 1500ms = 1.5 segundos
+                    } else {
+                        // Caso não encontre a seção, rola uma altura de tela
+                        smoothScrollTo(windowHeight, 1500);
+                    }
+                });
+            }
+
+            // Função para rolagem suave com duração personalizada
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const scrollY = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, scrollY);
+
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    }
+                }
+
+                // Função de easing para suavizar o movimento
+                function easeInOutQuad(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            }
+
+            // Controle de animação do header durante a rolagem
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+            let scrollThreshold = 100; // Limite para considerar a rolagem significativa
+
+            window.addEventListener('scroll', function () {
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Adiciona classe 'scrolled' quando a página é rolada para baixo
+                if (currentScrollTop > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Esconde o header quando rola para baixo e mostra quando rola para cima
+                if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                    // Rolando para baixo
+                    header.classList.add('hidden');
+                } else {
+                    // Rolando para cima
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = currentScrollTop;
+
+                // Destaca o item de menu ativo com base na seção visível
+                highlightActiveMenuItem();
+            });
+
+            // Função para destacar o item de menu ativo
+            function highlightActiveMenuItem() {
+                // Obtém todas as seções
+                const sections = document.querySelectorAll('section[id]');
+
+                // Determina qual seção está visível na tela
+                let activeSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const scrollPosition = window.pageYOffset;
+
+                    // Verifica se a seção está visível na tela
+                    if (scrollPosition >= sectionTop - 200 &&
+                        scrollPosition < sectionTop + sectionHeight - 200) {
+                        activeSection = '#' + section.getAttribute('id');
+                    }
+                });
+
+                // Remove a classe 'text-primary' de todos os links do menu
+                menuLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    link.classList.add('hover:text-primary');
+                });
+
+                // Adiciona a classe 'text-primary' ao link ativo
+                if (activeSection) {
+                    const activeLink = document.querySelector(`a[href="${activeSection}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('text-primary');
+
+                        // Adiciona um efeito visual ao link ativo
+                        const activeLinkRect = activeLink.getBoundingClientRect();
+                        const headerRect = header.getBoundingClientRect();
+
+                        // Cria um efeito de pulso no link ativo
+                        if (!activeLink.querySelector('.pulse-effect')) {
+                            const pulseEffect = document.createElement('span');
+                            pulseEffect.classList.add('pulse-effect');
+                            pulseEffect.style.cssText = `
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background-color: rgba(0, 229, 255, 0.5);
+                                top: 50%;
+                                left: -15px;
+                                transform: translateY(-50%);
+                                animation: pulse 1.5s infinite;
+                            `;
+                            activeLink.appendChild(pulseEffect);
+                        }
+                    }
+                }
+            }
+
+            // Destaca o item de menu ativo na carga inicial da página
+            highlightActiveMenuItem();
+        });
+    </script>
 </body>
 
 </html>
