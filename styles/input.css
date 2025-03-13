@@ -29,18 +29,6 @@
     display: none
   }
 
-  summary::after {
-    content: url("../assets/icons/caret-right.svg");
-    margin-top: 4px;
-    margin-left: 12px;
-  }
-
-  details[open] summary:after {
-    content: url("../assets/icons/caret-down.svg");
-    margin-bottom: 30px;
-    margin-left: 12px;
-  }
-
   /* Estilos adicionais para os links do menu */
   .menu-link {
     padding: 10px 10px;
