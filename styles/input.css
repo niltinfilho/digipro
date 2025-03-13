@@ -90,7 +90,7 @@
   }
 
   .btn-default {
-    @apply py-3 px-6 bg-primary hover:bg-secondary rounded-full text-white text-base md:text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
+    @apply py-2 md:py-3 px-4 md:px-6 bg-primary hover:bg-secondary rounded-full text-white text-base md:text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
   }
 
   .spacing {
@@ -371,7 +371,6 @@
   .servicesSwiper .swiper-button-next:hover,
   .servicesSwiper .swiper-button-prev:hover {
     background-color: rgba(0, 229, 255, 0.3);
-    transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 229, 255, 0.2);
   }
 
