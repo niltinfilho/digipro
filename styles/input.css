@@ -394,6 +394,8 @@
     background: #00e5ff !important;
   }
 
+
+
   /* Estilos específicos para desktop */
   @media (min-width: 1024px) {
     .servicesSwiper {
@@ -406,6 +408,11 @@
     .servicesSwiper {
       overflow: hidden !important;
       padding-bottom: 80px !important;
+    }
+
+    .projectsSwiper .swiper-button-next::after,
+    .projectsSwiper .swiper-button-prev::after {
+      font-size: 24px !important;
     }
 
     .servicesSwiper .swiper-slide,
