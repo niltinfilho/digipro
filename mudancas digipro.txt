@@ -1,6 +1,8 @@
 adicionar dois serviços: 
 
-- 
+- social media
+- design
+- producao de conteudo digital
 
 carioca - cardápio e social media
 90fitness - landing page
