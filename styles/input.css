@@ -78,7 +78,7 @@
   }
 
   .btn-default {
-    @apply py-2 md:py-3 px-4 md:px-6 bg-primary hover:bg-secondary rounded-full text-white text-base md:text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
+    @apply py-3 md:py-3 px-4 md:px-6 bg-primary hover:bg-secondary rounded-full text-white text-base md:text-lg shadow-btn hover:shadow-btn-hover transition-all duration-300;
   }
 
   .spacing {
