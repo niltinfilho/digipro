@@ -382,10 +382,18 @@
   .servicesSwiper .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.667) !important;
     opacity: 1;
     transition: all 0.3s ease;
     margin: 0 5px;
+  }
+
+  .projectsSwiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.667) !important;
+  }
+
+  .projectsSwiper .swiper-pagination-bullet-active {
+    background: #00e5ff !important;
   }
 
   .servicesSwiper .swiper-pagination-bullet-active {
